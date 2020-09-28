@@ -107,6 +107,7 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	videoID, err := getVideoID(commands[1])
 	if err != nil {
 		sendError(s, m, err)
+		return
 	}
 
 	call := youtubeService.Videos.List([]string{"id", "snippet", "contentDetails"}).Id(videoID).MaxResults(1)
