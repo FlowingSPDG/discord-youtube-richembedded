@@ -37,7 +37,7 @@ func init() {
 	flag.Parse()
 
 	if *DiscordToken == "" || *ytToken == "" {
-		logrus.Panicf("Insuccifient args...")
+		logrus.Panicf("Insufficient args...")
 	}
 
 	*DiscordToken = "Bot " + *DiscordToken
