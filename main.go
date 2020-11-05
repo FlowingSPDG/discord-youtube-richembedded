@@ -210,7 +210,7 @@ func sendRecommend(s *discordgo.Session, m *discordgo.MessageCreate, rec recomme
 			},
 			{
 				Name:   "長さ",
-				Value:  fmt.Sprintf("%d分%d秒", rec.duration.TM, rec.duration.TS),
+				Value:  fmt.Sprintf("%d時間m%d分%d秒", rec.duration.TH,rec.duration.TM, rec.duration.TS),
 				Inline: true,
 			},
 			/*{
